@@ -1,0 +1,6 @@
+{
+  "name": "Golang HLS",
+  "tagline": "A server that exposes a directory for video streaming via web interface",
+  "body": "Golang HLS Streamer\r\n===================\r\n\r\nSimple server that exposes a directory for video streaming via HTTP Live Streaming (HLS).\r\nUses ffmpeg for transcoding.\r\n\r\nThis project is cobbled together from all kinds of code I has lying around so it's pretty crappy all around.\r\n\r\nRunning it\r\n----------\r\n\r\n- Place ffmpeg and ffprobe binaries in \"tools\" dir\r\n- Run go run *.go <path to videos> in project root (e.g. go run *.go ~/Documents/)\r\n- Access http://localhost:8080/ui/\r\n\r\nLicense\r\n-------\r\nSee LICENSE.txt",
+  "note": "Don't delete this file! It's used internally to help with page regeneration."
+}
