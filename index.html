@@ -14,30 +14,35 @@
       <h1 class="project-name">Golang HLS</h1>
       <h2 class="project-tagline">A server that exposes a directory for video streaming via web interface</h2>
       <a href="https://github.com/shimberger/golang-hls" class="btn">View on GitHub</a>
-      <a href="https://github.com/shimberger/golang-hls/zipball/master" class="btn">Download .zip</a>
-      <a href="https://github.com/shimberger/golang-hls/tarball/master" class="btn">Download .tar.gz</a>
+      <a href="https://github.com/shimberger/gohls/releases/download/v0.1.0/gohls-linux-amd64-0.1.0.tar.gz" class="btn">Download for Linux</a>
+      <a href="https://github.com/shimberger/gohls/releases/download/v0.1.0/gohls-osx-0.1.0.tar.gz" class="btn">Download for macOS</a>
+      <a href="https://github.com/shimberger/gohls/releases/download/v0.1.0/gohls-windows-amd64-0.1.0.tar.gz" class="btn">Download for Windows</a>
     </section>
 
     <section class="main-content">
-      <h1>
-<a id="golang-hls-streamer" class="anchor" href="#golang-hls-streamer" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Golang HLS Streamer</h1>
+<h1 id="golanghlsstreamer">Golang HLS Streamer</h1>
 
-<p>Simple server that exposes a directory for video streaming via HTTP Live Streaming (HLS).
-Uses ffmpeg for transcoding.</p>
+<p>Simple server that exposes a directory for video streaming via HTTP Live Streaming (HLS). Uses ffmpeg for transcoding.</p>
 
-<p>This project is cobbled together from all kinds of code I has lying around so it's pretty crappy all around.</p>
+<p><em>This project is cobbled together from all kinds of code I has lying around so it's pretty crappy all around. It also has some serious shortcomings.</em></p>
 
-<h2>
-<a id="running-it" class="anchor" href="#running-it" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Running it</h2>
+<h2 id="runningit">Running it</h2>
 
-<ul>
-<li>Place ffmpeg and ffprobe binaries in "tools" dir</li>
-<li>Run go run *.go  in project root (e.g. go run *.go ~/Documents/)</li>
-<li>Access http://localhost:8080/ui/</li>
-</ul>
+<p><em>Important</em>: You need the ffmpeg and ffrpobe binaries in your PATH. The server will not start without them. You can find builds most operating systems at https://ffmpeg.org/download.html.</p>
 
-<h2>
-<a id="license" class="anchor" href="#license" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>License</h2>
+<ol>
+<li>Download the binary for your operating system from the releases page (https://github.com/shimberger/gohls/releases)</li>
+
+<li>Execute the command <code>gohls serve &lt;path to videos&gt;</code> e.g. <code>gohls serve ~/Documents/Videos</code> to serve the videos located in <code>~/Documents/Videos</code>.</li>
+
+<li>Visit the URL http://localhost:8080 to access the web interface</li>
+</ol>
+
+<h2 id="developingit">Developing it</h2>
+
+<p>Just do a <code>go get /github.com/shimberger/golhls/...</code> in your GOPATH. Then change into the project directory and run the development server by executing <code>./scripts/run_dev</code> (sorry Windows users). You need gulp &amp; npm to build the frontend.</p>
+
+<h2 id="license">License</h2>
 
 <p>See LICENSE.txt</p>
 
