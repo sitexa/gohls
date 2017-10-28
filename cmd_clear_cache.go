@@ -4,7 +4,7 @@ import (
 	"context"
 	"flag"
 	"github.com/google/subcommands"
-	"github.com/shimberger/gohls/hls"
+	"github.com/gohls/hls"
 )
 
 type clearCmd struct{}

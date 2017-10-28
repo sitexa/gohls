@@ -2,7 +2,7 @@ package main
 
 import (
 	log "github.com/Sirupsen/logrus"
-	"github.com/shimberger/gohls/hls"
+	"github.com/gohls/hls"
 	"os"
 	"os/exec"
 	"strconv"

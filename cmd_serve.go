@@ -5,7 +5,7 @@ import (
 	"flag"
 	"fmt"
 	"github.com/google/subcommands"
-	"github.com/shimberger/gohls/hls"
+	"github.com/gohls/hls"
 	"net/http"
 )
 
@@ -23,7 +23,7 @@ func (*serveCmd) Usage() string {
 }
 
 func (p *serveCmd) SetFlags(f *flag.FlagSet) {
-	f.IntVar(&p.port, "port", 8080, "Listening port")
+	f.IntVar(&p.port, "port", 8341, "Listening port")
 }
 
 func (p *serveCmd) Execute(_ context.Context, f *flag.FlagSet, _ ...interface{}) subcommands.ExitStatus {

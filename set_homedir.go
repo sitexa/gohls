@@ -3,7 +3,7 @@ package main
 import (
 	"flag"
 	log "github.com/Sirupsen/logrus"
-	"github.com/shimberger/gohls/hls"
+	"github.com/gohls/hls"
 	"path"
 )
 
